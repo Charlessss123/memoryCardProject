@@ -1,0 +1,142 @@
+<!-- <!doctype html> -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Matching Game</title>
+    <meta name="description" content="">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<!--     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda"> -->
+<!--     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/responsive.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Memory</h1>
+
+            <div>
+                <button class="btn restart">
+                    Restart
+                </button>
+                <button class="btn new-game">
+                    New Game
+                </button>
+            </div>
+        </header>
+    
+        
+    
+        <ul class="deck" id="card-deck">
+            <li class="card">
+                <i class="fa fa-diamond"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-paper-plane-o"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-cube"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bicycle"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-diamond"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bicycle"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-paper-plane-o"></i>
+            </li>
+            <li class="card">
+    
+                <i class="fa fa-cube"></i>
+            </li>
+        </ul>
+        <!--panel that will be show when you finish the game-->
+        <section class="pop-up hide">
+            <div class="result">
+                <h2><span class="pop-up-header">Congratulations!</span></h2>
+                <p>You needed <span id="fin-moves">0</span> moves to finish the game</p>
+                <p>Your time is <span id="fin-time">00.00</span>.</p>
+                <p class="fin-stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </p>
+                <img class="fireworks" src="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/mail-256.png" alt="fireworks">
+                <img class="cup cup-bronze hide" src="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/mail-256.png" alt="cup-bronze">
+                <img class="cup cup-silver hide" src="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/mail-256.png" alt="cup-silver">
+                <img class="cup cup-gold hide" src="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/mail-256.png" alt="cup-gold">
+                <p>Score: <span id="fin-score"></span></p>
+                <form class="print-your-name">
+                    <input id="input-name" type="text" placeholder="Enter your name here">
+                    <input id="btn-submit" class="btn" type="submit" value="Submit!">
+                </form>
+            </div>
+    
+        </section>
+
+
+
+
+        <section class="score-panel">
+
+            <div class="counter">
+                <button>  <span>Time <i class="fa fa-hourglass-half" title="Time"></i>
+                </span><span class="displayTime">00:00</span></button>
+            </div>
+            
+            <div class="current-rate">
+                <div class="counter"></div>
+               <button> <span>Move(s) </span><span class="moves">0</span> </button>
+            </div>
+            <ul class="star-rating hide">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+           
+    
+            <button class="btn ratings">Show <br> ratings</button>
+    
+        </section>
+    
+    </div>
+    <!--footer with links-->
+    <footer>
+    
+        
+       
+    </footer>
+    
+
+<script src="script.js"></script>
+</body>
+</html>
