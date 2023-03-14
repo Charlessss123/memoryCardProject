@@ -1,7 +1,6 @@
 // >>>>>> Objects and variables declaration section >>>>>>
 
-//Create a list that holds all of your cards
-// this array should be the same during all the time of a single macth and change only when the player press the btn "restart"
+
 let cardsArray = [
   "fa-anchor",
   "fa-anchor",
