@@ -50,7 +50,7 @@ let gameInterval;
 const mordal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".close-modal");
-const btnsOpenModal = document.querySelector(".show-modal");
+// const btnsOpenModal = document.querySelector(".show-modal");
 
 
 
@@ -329,7 +329,7 @@ const closeModal = function () {
 
 
 
-btnsOpenModal.addEventListener("click", openModal);
+// btnsOpenModal.addEventListener("click", openModal);
 overlay.addEventListener("click", closeModal);
 
 // menu modal  ////////
