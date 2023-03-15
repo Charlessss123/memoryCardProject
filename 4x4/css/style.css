@@ -28,6 +28,8 @@ body {
   font-size: 1em; /*16px*/
 }
 
+
+
 /* styles for the header */
 header {
   display: flex;
@@ -122,7 +124,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  
 }
 
 .deck .card.open {
@@ -337,7 +339,7 @@ input#btn-submit {
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 327px;
@@ -371,7 +373,7 @@ input#btn-submit {
   flex-direction: column; */
   /* align-items: center; */
   /* justify-content: space-around; */
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 327px;
@@ -577,7 +579,10 @@ footer .social {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin: 0 0 3em;
+    /* margin: 0 0 3em; */
+    margin-top: 85px;
+    margin-bottom: 105px;
+    
   }
 
   .deck .card {
@@ -1041,7 +1046,7 @@ footer .social {
 
   .modal {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 654px;
@@ -1074,6 +1079,7 @@ footer .social {
     display: flex;
     justify-content: space-around;
     margin-bottom: 30px;
+    margin-top: 50px;
   }
 
   .title {
@@ -1087,6 +1093,12 @@ footer .social {
     line-height: 50px;
     color: #152938;
     margin-right: 30px;
+    
+  }
+
+  .deck{
+    margin-top: 157px;
+    margin-bottom: 126px;
   }
 
   .desktop-menu {
@@ -1357,6 +1369,17 @@ footer .social {
     display: none;
   }
 
+
+  header{
+    margin-top: 50px;
+  }
+  
+
+  .deck{
+    margin-top: 80px;
+  }
+  
+
   .mobile-menu{
     position: relative;
     left: 50px;
@@ -1595,7 +1618,7 @@ footer .social {
     transform: translate(-50%, -50%);
     width: 327px;
     height: 376px;
-
+    
     background-color: white;
     /* padding: 6rem; */
     border-radius: 10px;
