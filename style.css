@@ -6,7 +6,7 @@
 }
 
 .title {
-  margin-top: 50px;
+  margin-top: 80px;
   margin-bottom: 45px;
   display: flex;
   justify-content: center;
@@ -31,6 +31,7 @@
   flex-direction: column;
   margin-bottom: 183px;
   justify-content: space-between;
+
 }
 .home-body h6{
     color: #7191A5;
@@ -76,7 +77,7 @@
 }
 
 .button-one button{
-  border-radius: 30%;
+  border-radius: 30px;
   border: none;
 }
 
@@ -87,7 +88,7 @@
 }
 
 .button-two button{
-  border-radius: 30%;
+  border-radius: 30px;
   border: none;
 }
 
@@ -105,14 +106,14 @@
 }
 
 .button-three button{
-  border-radius: 20%;
+  border-radius: 20px;
   border: none;
 }
 
 .buttons-3 {
   width: 134px;
   height: 40px;
-  border-radius: 20%;
+  
   
 }
 
@@ -129,7 +130,7 @@
 }
 
 .start button{
-  border-radius: 20%;
+  border-radius: 20px;
   border: none;
 }
 
@@ -189,7 +190,7 @@
   .buttons-2 {
     width: 119px;
     height: 52px;
-    border-radius: 20%;
+    
   }
 
   .button-two {
@@ -222,7 +223,7 @@
   }
 
   .start button{
-    border-radius: 20%;
+    border-radius: 20px;
   }
 
   .start {
@@ -236,6 +237,11 @@
   .home-body {
     width: 654px;
     height: 559px;
+    margin-top: 78px;
+  }
+
+  header{
+    margin-top: 169px;
   }
 
   .home-body h6{
@@ -260,7 +266,7 @@
   .buttons-1 {
     width: 256px;
     height: 52px;
-    border-radius: 20%;
+    
   }
 
   .button-one {
@@ -272,7 +278,7 @@
   .buttons-2 {
     width: 119px;
     height: 52px;
-    border-radius: 20%;
+   
   }
 
   .button-two {
@@ -291,13 +297,13 @@
   .buttons-3 {
     width: 256px;
     height: 52px;
-    border-radius: 20%;
+   
   }
 
   .start-button {
     width: 541px;
     height: 70px;
-    border-radius: 25%;
+    
     line-height: 39.68px;
     font-size: 32px;
     font-weight: 700;
