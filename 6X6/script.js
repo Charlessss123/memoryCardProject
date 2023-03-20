@@ -103,10 +103,26 @@ function shuffle(array) {
 }
 
 ///////////  Timer function /////////////////
+
+let paused = false;
+
+function resumeInterval(){
+  paused = false;
+}
+
+function pauseInterval(){
+  paused = true;
+}
+
+
 function timer() {
   let minutes = 0;
   let seconds = 0;
+
+
   gameInterval = setInterval(function () {
+
+    if(!paused){
     seconds = parseInt(seconds, 10) + 1;
     minutes = parseInt(minutes, 10);
     if (seconds >= 60) {
@@ -121,6 +137,7 @@ function timer() {
     lastTime.textContent = time.textContent;
     finalTime.textContent = time.textContent;
     // console.log(time,"hellooooo ");
+  }
   }, 1000);
 }
 
