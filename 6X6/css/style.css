@@ -337,7 +337,7 @@ input#btn-submit {
 
 .modal {
   position: absolute;
-  top: 35%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 327px;
@@ -371,7 +371,7 @@ input#btn-submit {
   flex-direction: column; */
   /* align-items: center; */
   /* justify-content: space-around; */
-  top: 35%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 327px;
