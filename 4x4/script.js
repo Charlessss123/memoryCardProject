@@ -1,6 +1,7 @@
 // >>>>>> Objects and variables declaration section >>>>>>
 
-
+//Create a list that holds all of your cards
+// this array should be the same during all the time of a single macth and change only when the player press the btn "restart"
 let cardsArray = [
   "fa-anchor",
   "fa-anchor",
@@ -52,8 +53,6 @@ const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".close-modal");
 // const btnsOpenModal = document.querySelector(".show-modal");
 
-
-
 ///////////////////////////////////////////////
 
 let modal = document.querySelector(".pop-up");
@@ -84,10 +83,24 @@ function shuffle(array) {
 }
 
 ///////////  Timer function /////////////////
+let paused = false;
+
+function resumeInterval(){
+  paused = false;
+}
+
+function pauseInterval(){
+  paused = true;
+}
+
 function timer() {
   let minutes = 0;
-  let seconds = 0;
+  let seconds = 0;  
+
+  // if (!paused){
   gameInterval = setInterval(function () {
+    if (!paused){
+         
     seconds = parseInt(seconds, 10) + 1;
     minutes = parseInt(minutes, 10);
     if (seconds >= 60) {
@@ -102,8 +115,10 @@ function timer() {
     lastTime.textContent = time.textContent;
     finalTime.textContent = time.textContent;
     // console.log(time,"hellooooo ");
+  }
   }, 1000);
 }
+// }
 
 function endOfGame() {
   clearInterval(gameInterval);
@@ -226,9 +241,9 @@ const pickACard = (card) => {
 
       if (firstClick === secondClick) {
         li1.classList.add("match");
-        li1.classList.add("true");
+        // li1.classList.add("true");
         li2.classList.add("match");
-        li2.classList.add("true");
+        // li2.classList.add("true");
         score.textContent += 10;
         matchedCard++;
         if (matchedCard === 8) {
@@ -238,22 +253,19 @@ const pickACard = (card) => {
           openModal();
           // mordal.classList.remove('hidden');
           // overlay.classList.remove('hidden');
-           
-         
-          
+
           const closeModal = function () {
             mordal.classList.add("hidden");
             overlay.classList.add("hidden");
           };
-          
 
           btnCloseModal.addEventListener("click", closeModal);
           overlay.addEventListener("click", closeModal);
         }
 
-        // console.log('Correct Choice ');
+        // console.log('Correct Match ');
       } else {
-        // console.log('Wrong Choice ');
+        // console.log('Wrong Match ');
         li1.classList.add("unMatch");
         li2.classList.add("unMatch");
         score.textContent -= 1;
@@ -269,10 +281,10 @@ const pickACard = (card) => {
 };
 
 function gameStart() {
-  // we store in a variable our "ul" element with inside the class "desk" and we store inside it our "li" element, created before.
+  // we store in a variable our "ul" element with inside the class "deck" and we store inside it our "li" element, created before.
   // list[0] because one the console appear as an object
   // we restart the variables
-  
+
   restartValue();
   // we restart the click
   restartClick();
@@ -314,44 +326,53 @@ Array.from(buttonRestart).forEach((el) => {
 //   modalClose();
 // });
 
-// end of Game modal
+Array.from(buttonResumeGame).forEach((el) => {
+  el.addEventListener("click", function () {
+    // gameStart();
+    modalClose();
+    closeModal();
+  });
+});
 
+
+// end of Game modal
 
 const openModal = function () {
   mordal.classList.remove("hidden");
   overlay.classList.remove("hidden");
+  
 };
 
 const closeModal = function () {
   mordal.classList.add("hidden");
   overlay.classList.add("hidden");
+
 };
-
-
 
 // btnsOpenModal.addEventListener("click", openModal);
 overlay.addEventListener("click", closeModal);
 
 // menu modal  ////////
-const menuModal = document.querySelector('.menu-modal');;
-const openMenuModalbtn = document.querySelector('.menu');
-const closeMenuModal = document.querySelector('.close');
-const overlayMenu = document.querySelector('.menu-overlay');
 
 
-const modalOpen = function(){
-    overlayMenu.classList.remove('hidden');
-    menuModal.classList.remove('hidden');
-    console.log('modal opened')
-}
+const menuModal = document.querySelector(".menu-modal");
+const openMenuModalbtn = document.querySelector(".menu");
+// const closeMenuModal = document.querySelector(".close");
+const overlayMenu = document.querySelector(".menu-overlay");
 
-const modalClose = function(){
-    overlayMenu.classList.add('hidden');
-    menuModal.classList.add('hidden');
+const modalOpen = function () {
+  overlayMenu.classList.remove("hidden");
+  menuModal.classList.remove("hidden");
+  pauseInterval();
+  console.log("modal opened");
+};
 
-}
-overlayMenu.addEventListener('click', modalClose);
+const modalClose = function () {
+  overlayMenu.classList.add("hidden");
+  menuModal.classList.add("hidden");
+  resumeInterval();
+};
+overlayMenu.addEventListener("click", modalClose);
 
-
-openMenuModalbtn.addEventListener('click', modalOpen);
+openMenuModalbtn.addEventListener("click", modalOpen);
 // closeMenuModal.addEventListener('click',modalClose );
